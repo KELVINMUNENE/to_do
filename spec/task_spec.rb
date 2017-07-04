@@ -8,4 +8,9 @@ require('rspec')
         expect(test_task.description()).to(eq("scrub the zebra"))
       end
     end
+    describe(".all") do
+    it("is empty at first") do
+      expect(Task.all()).to(eq([]))
+    end
   end
+end
