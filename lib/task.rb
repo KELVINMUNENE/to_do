@@ -21,6 +21,11 @@ class Task
       self.description().==(another_task.description())
     end
 
+desribe(".all") do
+  it("is empty at first")do
+    expect(Task.all()).to(eq([]))
+  end
+end
 
 
   define_singleton_method(:clear) do
