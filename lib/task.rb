@@ -17,6 +17,12 @@ class Task
     @@all_tasks.push(self)
   end
 
+  define_method(:==) do |another_task|
+      self.description().==(another_task.description())
+    end
+
+
+
   define_singleton_method(:clear) do
     @@all_tasks = []
   end
