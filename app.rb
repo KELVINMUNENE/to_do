@@ -4,9 +4,7 @@ require("sinatra")
   require("./lib/task")
   require("pg")
 
-
-   DB = PG.connect({:dbname => "to_do"})
-
+#
   get("/") do
     @tasks = Task.all()
     erb(:index)
@@ -16,5 +14,5 @@ require("sinatra")
     description = params.fetch("description")
     task = Task.new(description)
     task.save()
-    erb(:result)
+    erb(:success)
   end
