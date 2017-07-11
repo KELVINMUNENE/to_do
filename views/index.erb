@@ -10,9 +10,14 @@
 
   <p>Create a new task:</p>
 
-  <form action="/tasks" method="post">
-    <label for="description">Task Description</label>
-    <input id="description" name="description" type="text">
 
-   <button type="submit">Add task</button>
+  <form action="/tasks" method="post">
+    <label for ="description">Task Description</label>
+    <div class="uk-margin">
+            <div class="uk-inline">
+                <a class="uk-form-icon" href="#" uk-icon="icon: pencil"></a>
+                <input id="description" name="description" class="uk-input" type="text">
+            </div>
+        </div>
+        <button type="submit">Add task</button>
   </form>

@@ -14,5 +14,5 @@ require("sinatra")
     description = params.fetch("description")
     task = Task.new(description)
     task.save()
-    erb(:success)
+    erb(:result)
   end
